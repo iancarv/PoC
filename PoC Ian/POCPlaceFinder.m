@@ -8,6 +8,31 @@
 
 #import "POCPlaceFinder.h"
 
+@interface POCPlaceFinder ()
+
+- (void) setUp;
+
+@end
+
+
 @implementation POCPlaceFinder
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        [self setUp];
+    }
+    return self;
+}
+
+- (void)search {
+    
+}
+
+- (void)setUp {
+    
+}
+
+
 
 @end

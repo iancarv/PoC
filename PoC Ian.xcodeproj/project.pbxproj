@@ -17,6 +17,7 @@
 		37FBF6B41AE1264900522633 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBF6B31AE1264900522633 /* MapKit.framework */; };
 		37FBF6B71AE1377400522633 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37FBF6B61AE1377400522633 /* ApiKeys.plist */; };
 		37FBF6BA1AE13DA100522633 /* POCPlaceFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */; };
+		37FBF6BD1AE1419D00522633 /* POCFourSquareFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FBF6BC1AE1419D00522633 /* POCFourSquareFinder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		37FBF6B61AE1377400522633 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = Resources/ApiKeys.plist; sourceTree = "<group>"; };
 		37FBF6B81AE13DA100522633 /* POCPlaceFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCPlaceFinder.h; sourceTree = "<group>"; };
 		37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POCPlaceFinder.m; sourceTree = "<group>"; };
+		37FBF6BB1AE1419D00522633 /* POCFourSquareFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCFourSquareFinder.h; sourceTree = "<group>"; };
+		37FBF6BC1AE1419D00522633 /* POCFourSquareFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POCFourSquareFinder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 				37DD1AAB1AE1239F0095A4E5 /* Supporting Files */,
 				37FBF6B81AE13DA100522633 /* POCPlaceFinder.h */,
 				37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */,
+				37FBF6BB1AE1419D00522633 /* POCFourSquareFinder.h */,
+				37FBF6BC1AE1419D00522633 /* POCFourSquareFinder.m */,
 			);
 			path = "PoC Ian";
 			sourceTree = "<group>";
@@ -243,6 +248,7 @@
 				37DD1AB41AE1239F0095A4E5 /* POCViewController.m in Sources */,
 				37DD1AB11AE1239F0095A4E5 /* AppDelegate.m in Sources */,
 				37FBF6BA1AE13DA100522633 /* POCPlaceFinder.m in Sources */,
+				37FBF6BD1AE1419D00522633 /* POCFourSquareFinder.m in Sources */,
 				37DD1AAE1AE1239F0095A4E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
