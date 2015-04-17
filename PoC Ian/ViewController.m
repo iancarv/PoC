@@ -30,12 +30,47 @@
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.mapView];
     self.mapView.showsUserLocation = YES;
+    
+    [self addPinToMapAtLocation:[[CLLocation alloc] initWithLatitude:-23.550520 longitude:-46.633309] withTitle:@"Titulo legal" andSubtitle:@"Subtitulo bem legal"];
+    
+    [self zoomMapViewToAnotations];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - Public Methods
+
+#pragma mark - Private Methods
+
+- (void)addPinToMapAtLocation:(CLLocation *)location withTitle:(NSString *)title andSubtitle:(NSString *)subtitle {
+    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
+    point.coordinate = location.coordinate;
+    point.title = title;
+    point.subtitle = subtitle;
+    
+    [self.mapView addAnnotation:point];
+}
+
+// Metodo para conveniencia e para melhorar a experiencia de usuario
+// Fonte: https://gist.github.com/andrewgleave/915374
+- (void) zoomMapViewToAnotations {
+    MKMapRect zoomRect = MKMapRectNull;
+    for (id <MKAnnotation> annotation in self.mapView.annotations) {
+        MKMapPoint annotationPoint = MKMapPointForCoordinate(annotation.coordinate);
+        MKMapRect pointRect = MKMapRectMake(annotationPoint.x, annotationPoint.y, 0, 0);
+        if (MKMapRectIsNull(zoomRect)) {
+            zoomRect = pointRect;
+        } else {
+            zoomRect = MKMapRectUnion(zoomRect, pointRect);
+        }
+    }
+    [self.mapView setVisibleMapRect:zoomRect animated:YES];
+}
+
+
 
 #pragma mark - CLLocationManagerDelegate
 
