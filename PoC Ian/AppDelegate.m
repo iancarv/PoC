@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <MapKit/MapKit.h>
 
 @interface AppDelegate ()
 
