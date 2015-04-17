@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>kGoogleMapKey</key>
-	<string></string>
+	<string>Teste ignore</string>
 	<key>kFourSquareKey</key>
-	<string></string>
+	<string>Teste ignore</string>
 </dict>
 </plist>
