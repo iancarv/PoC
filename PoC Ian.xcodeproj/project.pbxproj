@@ -14,6 +14,7 @@
 		37DD1AB91AE123A00095A4E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1AB81AE123A00095A4E5 /* Images.xcassets */; };
 		37DD1ABC1AE123A00095A4E5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1ABA1AE123A00095A4E5 /* LaunchScreen.xib */; };
 		37DD1AC81AE123A00095A4E5 /* PoC_IanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */; };
+		37FBF6B41AE1264900522633 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBF6B31AE1264900522633 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,7 @@
 		37DD1AC11AE123A00095A4E5 /* PoC IanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PoC IanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD1AC61AE123A00095A4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoC_IanTests.m; sourceTree = "<group>"; };
+		37FBF6B31AE1264900522633 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37FBF6B41AE1264900522633 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +66,7 @@
 		37DD1A9F1AE1239F0095A4E5 = {
 			isa = PBXGroup;
 			children = (
+				37FBF6B31AE1264900522633 /* MapKit.framework */,
 				37DD1AAA1AE1239F0095A4E5 /* PoC Ian */,
 				37DD1AC41AE123A00095A4E5 /* PoC IanTests */,
 				37DD1AA91AE1239F0095A4E5 /* Products */,
@@ -81,6 +85,7 @@
 		37DD1AAA1AE1239F0095A4E5 /* PoC Ian */ = {
 			isa = PBXGroup;
 			children = (
+				37FBF6B51AE126D200522633 /* Resources */,
 				37DD1AAF1AE1239F0095A4E5 /* AppDelegate.h */,
 				37DD1AB01AE1239F0095A4E5 /* AppDelegate.m */,
 				37DD1AB21AE1239F0095A4E5 /* ViewController.h */,
@@ -117,6 +122,13 @@
 				37DD1AC61AE123A00095A4E5 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		37FBF6B51AE126D200522633 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -418,6 +430,7 @@
 				37DD1ACD1AE123A00095A4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		37DD1ACE1AE123A00095A4E5 /* Build configuration list for PBXNativeTarget "PoC IanTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +439,7 @@
 				37DD1AD01AE123A00095A4E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
