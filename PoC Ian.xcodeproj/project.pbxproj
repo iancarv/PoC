@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		37DD1AAE1AE1239F0095A4E5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AAD1AE1239F0095A4E5 /* main.m */; };
 		37DD1AB11AE1239F0095A4E5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AB01AE1239F0095A4E5 /* AppDelegate.m */; };
-		37DD1AB41AE1239F0095A4E5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AB31AE1239F0095A4E5 /* ViewController.m */; };
+		37DD1AB41AE1239F0095A4E5 /* POCViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AB31AE1239F0095A4E5 /* POCViewController.m */; };
 		37DD1AB71AE1239F0095A4E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1AB51AE1239F0095A4E5 /* Main.storyboard */; };
 		37DD1AB91AE123A00095A4E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1AB81AE123A00095A4E5 /* Images.xcassets */; };
 		37DD1ABC1AE123A00095A4E5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1ABA1AE123A00095A4E5 /* LaunchScreen.xib */; };
 		37DD1AC81AE123A00095A4E5 /* PoC_IanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */; };
 		37FBF6B41AE1264900522633 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBF6B31AE1264900522633 /* MapKit.framework */; };
 		37FBF6B71AE1377400522633 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37FBF6B61AE1377400522633 /* ApiKeys.plist */; };
+		37FBF6BA1AE13DA100522633 /* POCPlaceFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +35,8 @@
 		37DD1AAD1AE1239F0095A4E5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37DD1AAF1AE1239F0095A4E5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		37DD1AB01AE1239F0095A4E5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		37DD1AB21AE1239F0095A4E5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		37DD1AB31AE1239F0095A4E5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		37DD1AB21AE1239F0095A4E5 /* POCViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = POCViewController.h; sourceTree = "<group>"; };
+		37DD1AB31AE1239F0095A4E5 /* POCViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = POCViewController.m; sourceTree = "<group>"; };
 		37DD1AB61AE1239F0095A4E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37DD1AB81AE123A00095A4E5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		37DD1ABB1AE123A00095A4E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,6 +45,8 @@
 		37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoC_IanTests.m; sourceTree = "<group>"; };
 		37FBF6B31AE1264900522633 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37FBF6B61AE1377400522633 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = Resources/ApiKeys.plist; sourceTree = "<group>"; };
+		37FBF6B81AE13DA100522633 /* POCPlaceFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCPlaceFinder.h; sourceTree = "<group>"; };
+		37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POCPlaceFinder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,12 +93,14 @@
 				37FBF6B51AE126D200522633 /* Resources */,
 				37DD1AAF1AE1239F0095A4E5 /* AppDelegate.h */,
 				37DD1AB01AE1239F0095A4E5 /* AppDelegate.m */,
-				37DD1AB21AE1239F0095A4E5 /* ViewController.h */,
-				37DD1AB31AE1239F0095A4E5 /* ViewController.m */,
+				37DD1AB21AE1239F0095A4E5 /* POCViewController.h */,
+				37DD1AB31AE1239F0095A4E5 /* POCViewController.m */,
 				37DD1AB51AE1239F0095A4E5 /* Main.storyboard */,
 				37DD1AB81AE123A00095A4E5 /* Images.xcassets */,
 				37DD1ABA1AE123A00095A4E5 /* LaunchScreen.xib */,
 				37DD1AAB1AE1239F0095A4E5 /* Supporting Files */,
+				37FBF6B81AE13DA100522633 /* POCPlaceFinder.h */,
+				37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */,
 			);
 			path = "PoC Ian";
 			sourceTree = "<group>";
@@ -235,8 +240,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37DD1AB41AE1239F0095A4E5 /* ViewController.m in Sources */,
+				37DD1AB41AE1239F0095A4E5 /* POCViewController.m in Sources */,
 				37DD1AB11AE1239F0095A4E5 /* AppDelegate.m in Sources */,
+				37FBF6BA1AE13DA100522633 /* POCPlaceFinder.m in Sources */,
 				37DD1AAE1AE1239F0095A4E5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

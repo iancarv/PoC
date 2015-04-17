@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Ian. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "POCViewController.h"
 
-@interface ViewController ()
+@interface POCViewController ()
 
 @property (strong, nonatomic) CLLocationManager *locationManager;
 
@@ -16,7 +16,7 @@
 
 @end
 
-@implementation ViewController
+@implementation POCViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +31,6 @@
     [self.view addSubview:self.mapView];
     self.mapView.showsUserLocation = YES;
     
-    [self addPinToMapAtLocation:[[CLLocation alloc] initWithLatitude:-23.550520 longitude:-46.633309] withTitle:@"Titulo legal" andSubtitle:@"Subtitulo bem legal"];
     
     [self zoomMapViewToAnotations];
 }
@@ -54,7 +53,7 @@
     [self.mapView addAnnotation:point];
 }
 
-// Metodo para conveniencia e para melhorar a experiencia de usuario
+// Metodo de conveniencia para melhorar a experiencia de usuario. 
 // Fonte: https://gist.github.com/andrewgleave/915374
 - (void) zoomMapViewToAnotations {
     MKMapRect zoomRect = MKMapRectNull;
@@ -68,6 +67,9 @@
         }
     }
     [self.mapView setVisibleMapRect:zoomRect animated:YES];
+
+    double inset = -zoomRect.size.width * 0.1;
+    [self.mapView setVisibleMapRect:MKMapRectInset(zoomRect, inset, inset) animated:YES];
 }
 
 
