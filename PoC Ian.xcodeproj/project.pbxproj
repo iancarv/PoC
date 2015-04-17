@@ -15,6 +15,7 @@
 		37DD1ABC1AE123A00095A4E5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1ABA1AE123A00095A4E5 /* LaunchScreen.xib */; };
 		37DD1AC81AE123A00095A4E5 /* PoC_IanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */; };
 		37FBF6B41AE1264900522633 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBF6B31AE1264900522633 /* MapKit.framework */; };
+		37FBF6B71AE1377400522633 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37FBF6B61AE1377400522633 /* ApiKeys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		37DD1AC61AE123A00095A4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoC_IanTests.m; sourceTree = "<group>"; };
 		37FBF6B31AE1264900522633 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		37FBF6B61AE1377400522633 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = Resources/ApiKeys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 		37FBF6B51AE126D200522633 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				37FBF6B61AE1377400522633 /* ApiKeys.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DD1AB71AE1239F0095A4E5 /* Main.storyboard in Resources */,
+				37FBF6B71AE1377400522633 /* ApiKeys.plist in Resources */,
 				37DD1ABC1AE123A00095A4E5 /* LaunchScreen.xib in Resources */,
 				37DD1AB91AE123A00095A4E5 /* Images.xcassets in Resources */,
 			);
