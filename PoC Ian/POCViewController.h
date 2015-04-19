@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "POCFourSquareFinder.h"
 
-@interface POCViewController : UIViewController <CLLocationManagerDelegate>
+@interface POCViewController : UIViewController <CLLocationManagerDelegate, POCPlaceFinderDelegate>
 
 
 @end

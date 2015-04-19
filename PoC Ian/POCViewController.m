@@ -18,6 +18,8 @@
 
 @implementation POCViewController
 
+BOOL fetched;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.locationManager = [[CLLocationManager alloc] init];
@@ -25,14 +27,16 @@
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
         [self.locationManager requestWhenInUseAuthorization];
     }
+    _locationManager.distanceFilter = 9999;
+    _locationManager.desiredAccuracy = kCLLocationAccuracyThreeKilometers;
     [self.locationManager startUpdatingLocation];
     
     self.mapView = [[MKMapView alloc] initWithFrame:self.view.frame];
     [self.view addSubview:self.mapView];
     self.mapView.showsUserLocation = YES;
+    fetched = NO;
     
-    
-    [self zoomMapViewToAnotations];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,15 +44,18 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Public Methods
+#pragma mark - Metodos Privados
 
-#pragma mark - Private Methods
+- (void)addPinFromPlace:(POCPlace *)place  {
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:place.latitude longitude:place.longitude];
+    [self addPinToMapAtLocation:location withTitle:place.name];
+}
 
-- (void)addPinToMapAtLocation:(CLLocation *)location withTitle:(NSString *)title andSubtitle:(NSString *)subtitle {
+- (void)addPinToMapAtLocation:(CLLocation *)location withTitle:(NSString *)title{
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.coordinate = location.coordinate;
     point.title = title;
-    point.subtitle = subtitle;
+    point.subtitle = @"";
     
     [self.mapView addAnnotation:point];
 }
@@ -77,10 +84,24 @@
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-
+    NSLog(@"Didupdate");
+    if (!fetched) {
+        POCFourSquareFinder *finder = [[POCFourSquareFinder alloc] init];
+        finder.delegate = self;
+        [finder searchPlacesFromLocation:[locations objectAtIndex:0]];
+        fetched = YES;
+    }
 }
 
+#pragma mark - POCPlaceFinderDelegate
 
+- (void)placeFinder:(POCPlaceFinder *)finder foundPlaces:(NSArray *)places {
+    for (POCPlace *place in places) {
+        if ([place isKindOfClass:[POCPlace class]]) {
+            [self addPinFromPlace:place];
+        }
+    }
+}
 
 @end
 
