@@ -7,6 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+#import <RestKit/RestKit.h>
+#import "POCPlace.h"
+
 @protocol POCPlaceFinderDelegate;
 
 @interface POCPlaceFinder : NSObject
@@ -14,13 +18,15 @@
 @property (strong, nonatomic) NSArray *places;
 @property (weak) id<POCPlaceFinderDelegate> delegate;
 
-- (void)search;
-
+- (void)searchPlacesFromLocation:(CLLocation *)location;
+- (void)searchWithURLString:(NSString *)urlString andDescriptor:(RKResponseDescriptor *)responseDescriptor;
+- (void) setUp;
 @end
 
 @protocol POCPlaceFinderDelegate <NSObject>
 
 @required
-- (void)placeFinder:(POCPlaceFinder*)finder foundItems:(NSArray *)items;
+- (void)placeFinder:(POCPlaceFinder*) finder foundPlaces:(NSArray *) places;
+
 
 @end
