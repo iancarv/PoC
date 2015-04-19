@@ -84,7 +84,6 @@ BOOL fetched;
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-    NSLog(@"Didupdate");
     if (!fetched) {
         POCFourSquareFinder *finder = [[POCFourSquareFinder alloc] init];
         finder.delegate = self;
@@ -101,6 +100,7 @@ BOOL fetched;
             [self addPinFromPlace:place];
         }
     }
+    [self zoomMapViewToAnotations];
 }
 
 @end

@@ -26,15 +26,8 @@
 }
 
 - (void)searchPlacesFromLocation:(CLLocation *)location {
-    
-}
-
-- (void)setUp {
-    
-}
-
-- (void)searchWithURLString:(NSString *)urlString andDescriptor:(RKResponseDescriptor *)responseDescriptor {
-    NSLog(@"comecou");
+    RKResponseDescriptor *responseDescriptor = [self responseDescriptor];
+    NSString *urlString = [self requestURLForLocation:location];
     NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     RKObjectRequestOperation *operation = [[RKObjectRequestOperation alloc] initWithRequest:request responseDescriptors:@[responseDescriptor]];
@@ -44,6 +37,8 @@
     } failure:nil];
     [operation start];
 }
+
+
 
 
 @end

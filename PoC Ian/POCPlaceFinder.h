@@ -21,6 +21,8 @@
 - (void)searchPlacesFromLocation:(CLLocation *)location;
 - (void)searchWithURLString:(NSString *)urlString andDescriptor:(RKResponseDescriptor *)responseDescriptor;
 - (void) setUp;
+- (NSString *)requestURLForLocation:(CLLocation *)location;
+- (RKResponseDescriptor *)responseDescriptor;
 @end
 
 @protocol POCPlaceFinderDelegate <NSObject>

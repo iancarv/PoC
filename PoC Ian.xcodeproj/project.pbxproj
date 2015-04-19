@@ -15,6 +15,7 @@
 		37DD1AB91AE123A00095A4E5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1AB81AE123A00095A4E5 /* Images.xcassets */; };
 		37DD1ABC1AE123A00095A4E5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37DD1ABA1AE123A00095A4E5 /* LaunchScreen.xib */; };
 		37DD1AC81AE123A00095A4E5 /* PoC_IanTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */; };
+		37EC0B2F1AE456BA00C5BF8C /* POCGoogleMapsFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 37EC0B2E1AE456BA00C5BF8C /* POCGoogleMapsFinder.m */; };
 		37FBF6B41AE1264900522633 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37FBF6B31AE1264900522633 /* MapKit.framework */; };
 		37FBF6B71AE1377400522633 /* ApiKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 37FBF6B61AE1377400522633 /* ApiKeys.plist */; };
 		37FBF6BA1AE13DA100522633 /* POCPlaceFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */; };
@@ -49,6 +50,8 @@
 		37DD1AC11AE123A00095A4E5 /* PoC IanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PoC IanTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37DD1AC61AE123A00095A4E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		37DD1AC71AE123A00095A4E5 /* PoC_IanTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PoC_IanTests.m; sourceTree = "<group>"; };
+		37EC0B2D1AE456BA00C5BF8C /* POCGoogleMapsFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCGoogleMapsFinder.h; sourceTree = "<group>"; };
+		37EC0B2E1AE456BA00C5BF8C /* POCGoogleMapsFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POCGoogleMapsFinder.m; sourceTree = "<group>"; };
 		37FBF6B31AE1264900522633 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		37FBF6B61AE1377400522633 /* ApiKeys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ApiKeys.plist; path = Resources/ApiKeys.plist; sourceTree = "<group>"; };
 		37FBF6B81AE13DA100522633 /* POCPlaceFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POCPlaceFinder.h; sourceTree = "<group>"; };
@@ -124,6 +127,8 @@
 				37FBF6B91AE13DA100522633 /* POCPlaceFinder.m */,
 				37FBF6BB1AE1419D00522633 /* POCFourSquareFinder.h */,
 				37FBF6BC1AE1419D00522633 /* POCFourSquareFinder.m */,
+				37EC0B2D1AE456BA00C5BF8C /* POCGoogleMapsFinder.h */,
+				37EC0B2E1AE456BA00C5BF8C /* POCGoogleMapsFinder.m */,
 				370408A21AE342E1006A8138 /* POCPlace.h */,
 				370408A31AE342E1006A8138 /* POCPlace.m */,
 			);
@@ -310,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37DD1AB41AE1239F0095A4E5 /* POCViewController.m in Sources */,
+				37EC0B2F1AE456BA00C5BF8C /* POCGoogleMapsFinder.m in Sources */,
 				37DD1AB11AE1239F0095A4E5 /* AppDelegate.m in Sources */,
 				370408A41AE342E1006A8138 /* POCPlace.m in Sources */,
 				37FBF6BA1AE13DA100522633 /* POCPlaceFinder.m in Sources */,
