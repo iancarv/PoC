@@ -51,12 +51,11 @@ BOOL fetched;
     [self addPinToMapAtLocation:location withTitle:place.name];
 }
 
-- (void)addPinToMapAtLocation:(CLLocation *)location withTitle:(NSString *)title{
+- (void)addPinToMapAtLocation:(CLLocation *)location withTitle:(NSString *)title {
     MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
     point.coordinate = location.coordinate;
     point.title = title;
-    point.subtitle = @"";
-    
+
     [self.mapView addAnnotation:point];
 }
 
@@ -85,9 +84,13 @@ BOOL fetched;
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
     if (!fetched) {
-        POCFourSquareFinder *finder = [[POCFourSquareFinder alloc] init];
-        finder.delegate = self;
-        [finder searchPlacesFromLocation:[locations objectAtIndex:0]];
+        POCFourSquareFinder *fourSquaredFinder = [[POCFourSquareFinder alloc] init];
+        fourSquaredFinder.delegate = self;
+        [fourSquaredFinder searchPlacesFromLocation:[locations objectAtIndex:0]];
+        
+        POCGoogleMapsFinder *mapsFinder = [[POCGoogleMapsFinder alloc] init];
+        mapsFinder.delegate = self;
+        [mapsFinder searchPlacesFromLocation:[locations objectAtIndex:0]];
         fetched = YES;
     }
 }
